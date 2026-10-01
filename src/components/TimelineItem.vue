@@ -127,6 +127,28 @@ const cc = computed(() => colorClasses[statusColor.value])
             {{ item.summary }}
           </p>
 
+          <!-- CTA resaltado -->
+          <div
+            v-if="item.cta"
+            class="mb-4 flex"
+            :class="side === 'left' ? 'md:justify-end' : ''"
+          >
+            <a
+              :href="item.cta.url"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
+                     bg-orange-500 hover:bg-orange-400 text-slate-950
+                     font-bold text-sm
+                     shadow-[0_0_25px_rgba(249,115,22,0.5)]
+                     hover:shadow-[0_0_35px_rgba(249,115,22,0.8)]
+                     hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <ExternalLink class="w-4 h-4" />
+              {{ item.cta.label }}
+            </a>
+          </div>
+
           <!-- Botón expandir -->
           <button 
             v-if="hasDetails || item.links?.length || item.media?.length"

@@ -120,6 +120,7 @@ export const timeline = [
       { label: 'Video Usuario 2', url: 'https://drive.google.com/file/d/1_q537R7HC63kxGU3D-uhZ89LSgg4mCb2/view?usp=sharing', icon: 'Youtube' },
       { label: 'Video Usuario 3', url: 'https://drive.google.com/file/d/13x6Ljjc4jJqTsGcS-GBISEaXY1OQzFOB/view?usp=sharing', icon: 'Youtube' },
     ],
+    cta: { label: 'Ver pruebas de usuario', url: 'https://drive.google.com/file/d/13-U1Au-MNubrSuIcMGVr_beGiy4jpUjM/view?usp=drive_link' },
   },
   {
     id: 'entrega',
