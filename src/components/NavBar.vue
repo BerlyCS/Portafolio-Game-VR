@@ -6,7 +6,8 @@ const isOpen = ref(false)
 const links = [
   { name: 'Inicio', to: '/' },
   { name: 'Gameplay', to: '/gameplay' },
-  { name: 'Proyecto', to: '/project' },
+  { name: 'Desarrollo', to: '/project' },
+  { name: 'Pruebas de Usuario', to: '/pruebas-usuario' },
   { name: 'Tecnologías', href: '#tech' },
 ]
 </script>

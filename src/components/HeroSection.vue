@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Sparkles, Play } from 'lucide-vue-next'
+import { Sparkles, Play, ClipboardCheck } from 'lucide-vue-next'
 
 const baseUrl = import.meta.env.BASE_URL
 const demoUrl = 'https://drive.google.com/file/d/13-U1Au-MNubrSuIcMGVr_beGiy4jpUjM/view?usp=drive_link'
@@ -103,6 +103,16 @@ onUnmounted(() => {
           <Play class="w-4 h-4" />
           Ver demo
         </a>
+
+        <RouterLink
+          to="/pruebas-usuario"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full
+                 bg-slate-900/80 hover:bg-slate-800 text-slate-100
+                 font-bold border border-orange-500/40 backdrop-blur-md transition"
+        >
+          <ClipboardCheck class="w-4 h-4 text-orange-400" />
+          Pruebas de Usuario
+        </RouterLink>
       </div>
     </div>
 
