@@ -1,3 +1,5 @@
+const baseUrl = import.meta.env.BASE_URL
+
 export const projectMeta = {
   title: 'Campfire Defense',
   subtitle: 'Cómo nació, creció y sobrevivió una idea',
@@ -67,10 +69,10 @@ export const timeline = [
       { label: 'Link Storyboard completo', url: 'https://drive.google.com/drive/folders/130FtPHt4sbQLz9dCutGUdfIbS3TMCUMM?usp=sharing', icon: 'ExternalLink' }
     ],
     media: [
-      { type: 'image', src: '/img/sb1.webp', caption: 'Primera escena del Juego' },
-      { type: 'image', src: '/img/sb2.webp', caption: 'Mecanica de la Espada' },
-      { type: 'image', src: '/img/sb3.webp', caption: 'Mecanica del Oscuridad' },
-      { type: 'image', src: '/img/sb4.webp', caption: 'Final del juego cuando amanece' },
+      { type: 'image', src: `${baseUrl}img/sb1.webp`, caption: 'Primera escena del Juego' },
+      { type: 'image', src: `${baseUrl}img/sb2.webp`, caption: 'Mecanica de la Espada' },
+      { type: 'image', src: `${baseUrl}img/sb3.webp`, caption: 'Mecanica del Oscuridad' },
+      { type: 'image', src: `${baseUrl}img/sb4.webp`, caption: 'Final del juego cuando amanece' },
     ],
   },
   {

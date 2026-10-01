@@ -4,6 +4,8 @@ import {
   Moon, Sparkles, ArrowRight
 } from 'lucide-vue-next'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const pillars = [
   {
     id: 'objective',
@@ -138,7 +140,7 @@ const vrFeatures = [
               playsinline
               class="absolute inset-0 w-full h-full object-cover"
             >
-              <source src="/videos/animation1.webm" type="video/webm" />
+              <source :src="`${baseUrl}videos/animation1.webm`" type="video/webm" />
             </video>
 
             <div class="absolute inset-0 bg-linear-to-t from-slate-950/80 to-transparent"></div>

@@ -4,9 +4,9 @@ import { ref } from 'vue'
 
 const isOpen = ref(false)
 const links = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Gameplay', href: '/gameplay' },
-  { name: 'Proyecto', href: '/project' },
+  { name: 'Inicio', to: '/' },
+  { name: 'Gameplay', to: '/gameplay' },
+  { name: 'Proyecto', to: '/project' },
   { name: 'Tecnologías', href: '#tech' },
 ]
 </script>
@@ -25,7 +25,11 @@ const links = [
       <!-- Links desktop -->
       <ul class="hidden md:flex items-center gap-8">
         <li v-for="link in links" :key="link.name">
-          <a :href="link.href" 
+          <RouterLink v-if="link.to" :to="link.to"
+             class="text-slate-300 hover:text-orange-400 transition-colors text-sm font-medium">
+            {{ link.name }}
+          </RouterLink>
+          <a v-else :href="link.href"
              class="text-slate-300 hover:text-orange-400 transition-colors text-sm font-medium">
             {{ link.name }}
           </a>
@@ -50,7 +54,10 @@ const links = [
     <div v-if="isOpen" class="md:hidden bg-slate-900 border-t border-slate-800 px-6 py-4">
       <ul class="flex flex-col gap-4">
         <li v-for="link in links" :key="link.name">
-          <a :href="link.href" @click="isOpen = false" class="text-slate-300 hover:text-orange-400">
+          <RouterLink v-if="link.to" :to="link.to" @click="isOpen = false" class="text-slate-300 hover:text-orange-400">
+            {{ link.name }}
+          </RouterLink>
+          <a v-else :href="link.href" @click="isOpen = false" class="text-slate-300 hover:text-orange-400">
             {{ link.name }}
           </a>
         </li>

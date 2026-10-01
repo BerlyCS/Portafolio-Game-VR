@@ -2,6 +2,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Sparkles } from 'lucide-vue-next'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const mouseX = ref(0)
 const mouseY = ref(0)
 const scrollY = ref(0)
@@ -37,7 +39,7 @@ onUnmounted(() => {
 
     <div class="absolute bottom-0 left-0 w-full z-0 pointer-events-none">
       <img 
-        src="/img/mountains.webp" 
+        :src="`${baseUrl}img/mountains.webp`" 
         alt="Bosque nocturno"
         class="w-full h-auto
                brightness-[0.6] contrast-110 saturate-50
@@ -52,7 +54,7 @@ onUnmounted(() => {
 
 
     <img 
-      src="/hero-forest.png" 
+      :src="`${baseUrl}hero-forest.png`" 
       alt="Forest Background" 
       class="absolute bottom-0 left-0 w-[80%] md:w-[60%] max-w-5xl md:max-w-3xl h-auto z-[6] pointer-events-none 
              mask-[linear-gradient(to_right,black_40%,transparent_100%),linear-gradient(to_top,black_40%,transparent_100%)]
