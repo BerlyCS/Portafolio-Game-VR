@@ -1,8 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Sparkles } from 'lucide-vue-next'
+import { Sparkles, Play } from 'lucide-vue-next'
 
 const baseUrl = import.meta.env.BASE_URL
+const demoUrl = 'https://drive.google.com/file/d/13-U1Au-MNubrSuIcMGVr_beGiy4jpUjM/view?usp=drive_link'
 
 const mouseX = ref(0)
 const mouseY = ref(0)
@@ -88,6 +89,21 @@ onUnmounted(() => {
       <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto mb-12">
         <span class="text-orange-400 font-semibold">Empuña tu espada, tensa tu arco y mantén viva la llama</span>.
       </p>
+
+      <!-- CTA -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          :href="demoUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full
+                 bg-orange-500 hover:bg-orange-400 text-slate-950
+                 font-bold transition shadow-[0_0_30px_rgba(249,115,22,0.4)]"
+        >
+          <Play class="w-4 h-4" />
+          Ver demo
+        </a>
+      </div>
     </div>
 
   </section>

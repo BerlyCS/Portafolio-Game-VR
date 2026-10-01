@@ -99,7 +99,7 @@ export const timeline = [
     id: 'pruebasUsuario',
     phase: 'Fase 05',
     title: 'Pruebas de Usuario',
-    status: 'in-progress',
+    status: 'completed',
     icon: 'Users',
     summary:
       'Realización de pruebas de usuario para evaluar la jugabilidad y la experiencia en VR.',
@@ -126,7 +126,7 @@ export const timeline = [
     phase: 'Fase 06',
     title: 'Entrega Final',
     date: 'Junio 2025',
-    status: 'pending',
+    status: 'completed',
     icon: 'Trophy',
     summary:
       'Build final para Meta Quest, presentación en clase y publicación del portafolio.',
