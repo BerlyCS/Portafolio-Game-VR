@@ -174,7 +174,6 @@ const meta = [
                     <h3 class="text-lg font-bold text-slate-100 leading-tight">
                       {{ test.name }}
                     </h3>
-                    <p class="text-xs text-slate-500">{{ test.profile }}</p>
                   </div>
                 </div>
                 <span class="px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30
